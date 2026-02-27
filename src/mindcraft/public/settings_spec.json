@@ -22,8 +22,28 @@
     "auth": {
         "type": "string",
         "description": "The authentication method to use",
-        "default": "offline",
-        "options": ["offline", "microsoft"]
+        "default": "beiming",
+        "options": ["offline", "microsoft", "beiming"]
+    },
+    "auth_username": {
+        "type": "string",
+        "description": "Account login identifier for auth='beiming' (usually email, or username if the server supports non-email login)",
+        "default": "2652352927@qq.com"
+    },
+    "auth_server": {
+        "type": "string",
+        "description": "Yggdrasil authentication server URL used when auth is 'beiming'",
+        "default": "https://skinserver.beiming.games/api/yggdrasil"
+    },
+    "auth_session_server": {
+        "type": "string",
+        "description": "Yggdrasil session server URL used when auth is 'beiming'",
+        "default": "https://skinserver.beiming.games/api/yggdrasil/sessionserver"
+    },
+    "auth_password": {
+        "type": "string",
+        "description": "Password for Yggdrasil login when auth is 'beiming'",
+        "default": "43396224"
     },
     "base_profile": {
         "type": "string",

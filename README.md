@@ -89,7 +89,7 @@ ollama pull sweaterdog/andy-4:micro-q8_0 && ollama pull embeddinggemma
 ```
 
 ## Online Servers
-To connect to online servers your bot will need an official Microsoft/Minecraft account. You can use your own personal one, but will need another account if you want to connect too and play with it. To connect, change these lines in `settings.js`:
+To connect to online servers your bot will usually need an official Microsoft/Minecraft account. You can use your own personal one, but will need another account if you want to connect too and play with it. To connect with Microsoft auth, change these lines in `settings.js`:
 ```javascript
 "host": "111.222.333.444",
 "port": 55920,
@@ -97,10 +97,20 @@ To connect to online servers your bot will need an official Microsoft/Minecraft 
 
 // rest is same...
 ```
+
+Mindcraft also supports Yggdrasil-compatible skin/auth servers (for example Beiming). Set auth to `"beiming"` and provide server + credentials:
+```javascript
+"auth": "beiming",
+"auth_username": "your_email_or_username",
+"auth_password": "your_password",
+"auth_server": "https://skinserver.beiming.games/api/yggdrasil",
+"auth_session_server": "https://skinserver.beiming.games/api/yggdrasil/sessionserver"
+```
+
 > [!Important]
 > The bot's name in the profile.json must exactly match the Minecraft profile name! Otherwise the bot will spam talk to itself.
 
-To use different accounts, Mindcraft will connect with the account that the Minecraft launcher is currently using. You can switch accounts in the launcher, then run `node main.js`, then switch to your main account after the bot has connected.
+To use different Microsoft accounts, Mindcraft will connect with the account that the Minecraft launcher is currently using. You can switch accounts in the launcher, then run `node main.js`, then switch to your main account after the bot has connected.
 
 ## Tasks
 
