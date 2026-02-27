@@ -2,7 +2,11 @@ const settings = {
     "minecraft_version": "auto", // or specific version like "1.21.6"
     "host": "127.0.0.1", // or "localhost", "your.ip.address.here"
     "port": 55916, // set to -1 to automatically scan for open ports
-    "auth": "offline", // or "microsoft"
+    "auth": "beiming", // "offline", "microsoft", or "beiming" (Yggdrasil skin server login)
+    "auth_username": "2652352927@qq.com", // login identifier for auth="beiming" (email or username)
+    "auth_server": "https://skinserver.beiming.games/api/yggdrasil", // Yggdrasil auth server for auth="beiming"
+    "auth_session_server": "https://skinserver.beiming.games/api/yggdrasil/sessionserver", // Yggdrasil session server for auth="beiming"
+    "auth_password": "43396224", // password for auth="beiming"
 
     // the mindserver manages all agents and hosts the UI
     "mindserver_port": 8080,

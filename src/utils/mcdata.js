@@ -57,8 +57,15 @@ export function initBot(username) {
         username: username,
         host: settings.host,
         port: settings.port,
-        auth: settings.auth,
+        auth: settings.auth === 'beiming' ? 'mojang' : settings.auth,
         version: mc_version,
+    }
+
+    if (settings.auth === 'beiming') {
+        options.username = settings.auth_username || username;
+        options.password = settings.auth_password;
+        options.authServer = settings.auth_server;
+        options.sessionServer = settings.auth_session_server;
     }
     if (!mc_version || mc_version === "auto") {
         delete options.version;
